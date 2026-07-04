@@ -1,0 +1,2082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="PRAVAHA 2026 - Annual flagship college festival of Swami Keshwanand Institute of Technology (SKIT).">
+	<meta name="theme-color" content="#0EA5E9">
+	<meta name="keywords" content="PRAVAHA 2026, SKIT, college fest, annual festival, hackathon, gaming, sports, events">
+	<title>PRAVAHA 2026 | Swami Keshwanand Institute of Technology</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+	<script src="https://unpkg.com/lucide@latest"></script>
+	<style>
+		:root {
+			--bg: #08111F;
+			--bg-2: #0F172A;
+			--bg-3: #172554;
+			--card: rgba(255, 255, 255, 0.08);
+			--card-2: rgba(255, 255, 255, 0.05);
+			--text: #FFFFFF;
+			--body: #D1D5DB;
+			--muted: #94A3B8;
+			--blue: #38BDF8;
+			--cyan: #0EA5E9;
+			--purple: #60A5FA;
+			--violet: #7C3AED;
+			--orange: #38BDF8;
+			--gold: #FACC15;
+			--emerald: #10B981;
+			--pink: #38BDF8;
+			--line: rgba(255, 255, 255, 0.15);
+			--shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+			--blur: blur(20px);
+			--radius: 24px;
+			--max: 1200px;
+		}
+
+		* { box-sizing: border-box; }
+		html { scroll-behavior: smooth; }
+		body {
+			margin: 0;
+			font-family: 'Inter', sans-serif;
+			color: var(--text);
+			background:
+				radial-gradient(circle at 12% 12%, rgba(56, 189, 248, 0.26), transparent 22%),
+				radial-gradient(circle at 78% 18%, rgba(14, 165, 233, 0.22), transparent 24%),
+				radial-gradient(circle at 22% 84%, rgba(96, 165, 250, 0.10), transparent 20%),
+				linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 48%, var(--bg-3) 100%);
+			overflow-x: hidden;
+		}
+
+		body::before {
+			content: "";
+			position: fixed;
+			inset: 0;
+			pointer-events: none;
+			background-image:
+				linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+				linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+			background-size: 64px 64px;
+			mask-image: linear-gradient(180deg, rgba(0,0,0,0.9), transparent 96%);
+			opacity: 0.22;
+		}
+
+		a { color: inherit; text-decoration: none; }
+		img, video { max-width: 100%; display: block; }
+		button, input, select, textarea { font: inherit; }
+
+		.sr-only {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			padding: 0;
+			margin: -1px;
+			overflow: hidden;
+			clip: rect(0, 0, 0, 0);
+			white-space: nowrap;
+			border: 0;
+		}
+
+		.progress {
+			position: fixed;
+			inset: 0 auto auto 0;
+			width: 100%;
+			height: 3px;
+			z-index: 1000;
+			background: rgba(255,255,255,0.06);
+		}
+
+		.progress span {
+			display: block;
+			width: 0;
+			height: 100%;
+			background: linear-gradient(90deg, var(--blue), var(--cyan), var(--purple));
+			box-shadow: 0 0 18px rgba(56, 189, 248, 0.8);
+		}
+
+		.page {
+			width: min(var(--max), calc(100% - 28px));
+			margin: 0 auto;
+		}
+
+		.glass {
+			background: var(--card);
+			border: 1px solid var(--line);
+			backdrop-filter: var(--blur);
+			-webkit-backdrop-filter: var(--blur);
+			box-shadow: var(--shadow);
+		}
+
+		.nav {
+			position: fixed;
+			top: 14px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: min(var(--max), calc(100% - 18px));
+			z-index: 900;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 14px;
+			padding: 12px 16px;
+			border-radius: 999px;
+			background: rgba(17, 24, 39, 0.68);
+		}
+
+		.brand {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			min-width: fit-content;
+		}
+
+		.brand-mark {
+			width: 42px;
+			height: 42px;
+			display: grid;
+			place-items: center;
+			border-radius: 14px;
+			background: linear-gradient(135deg, var(--blue), var(--purple));
+			color: #06111f;
+			font-weight: 900;
+			box-shadow: 0 0 26px rgba(59,130,246,0.35);
+		}
+
+		.brand strong {
+			display: block;
+			font-family: 'Space Grotesk', sans-serif;
+			letter-spacing: 0.08em;
+		}
+
+		.nav-links {
+			display: flex;
+			gap: 18px;
+			flex-wrap: wrap;
+			justify-content: center;
+			color: var(--muted);
+			font-size: 0.95rem;
+		}
+
+		.nav-links a:hover { color: var(--text); }
+
+		.nav-actions { display: flex; gap: 10px; align-items: center; }
+
+		.icon-btn,
+		.btn,
+		.pill,
+		.chip,
+		.tag,
+		.filter-btn,
+		.register-btn,
+		.lightbox-close,
+		.back-to-top,
+		.float-register {
+			border: 1px solid var(--line);
+			border-radius: 999px;
+			background: rgba(255,255,255,0.05);
+			color: var(--text);
+			transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease, background 220ms ease;
+		}
+
+		.icon-btn:hover,
+		.btn:hover,
+		.chip:hover,
+		.tag:hover,
+		.filter-btn:hover,
+		.register-btn:hover,
+		.lightbox-close:hover,
+		.back-to-top:hover,
+		.float-register:hover {
+			transform: translateY(-3px) scale(1.02);
+			border-color: rgba(6, 182, 212, 0.45);
+			box-shadow: 0 0 28px rgba(6, 182, 212, 0.18);
+		}
+
+		.icon-btn {
+			width: 42px;
+			height: 42px;
+			display: grid;
+			place-items: center;
+			cursor: pointer;
+		}
+
+		.hero {
+			position: relative;
+			min-height: 100vh;
+			padding: 130px 0 64px;
+			display: grid;
+			place-items: center;
+		}
+
+		.hero-bg {
+			position: absolute;
+			inset: 0;
+			overflow: hidden;
+			pointer-events: none;
+		}
+
+		.beam,
+		.orb,
+		.mesh {
+			position: absolute;
+			filter: blur(0.5px);
+		}
+
+		.beam {
+			width: 260px;
+			height: 3px;
+			background: linear-gradient(90deg, transparent, rgba(56,189,248,0.8), transparent);
+			box-shadow: 0 0 18px rgba(56,189,248,0.8);
+			transform-origin: center;
+			animation: drift 10s linear infinite;
+		}
+
+		.mesh {
+			inset: 0;
+			background:
+				radial-gradient(circle at 20% 20%, rgba(56,189,248,0.16), transparent 22%),
+				radial-gradient(circle at 80% 20%, rgba(14,165,233,0.14), transparent 24%),
+				radial-gradient(circle at 50% 80%, rgba(96,165,250,0.08), transparent 20%);
+			opacity: 0.75;
+		}
+
+		.orb {
+			border-radius: 50%;
+			opacity: 0.55;
+			animation: floatOrb 8s ease-in-out infinite;
+		}
+
+		.orb.one { width: 320px; height: 320px; right: -90px; top: 40px; background: radial-gradient(circle, rgba(56,189,248,0.35), transparent 62%); }
+		.orb.two { width: 220px; height: 220px; left: -60px; top: 260px; background: radial-gradient(circle, rgba(14,165,233,0.26), transparent 62%); animation-delay: -2s; }
+		.orb.three { width: 240px; height: 240px; right: 18%; bottom: 2%; background: radial-gradient(circle, rgba(96,165,250,0.24), transparent 62%); animation-delay: -4s; }
+
+		@keyframes drift { from { transform: translateX(-20%) rotate(18deg); } to { transform: translateX(20%) rotate(18deg); } }
+		@keyframes floatOrb { 0%,100% { transform: translateY(0) translateX(0) scale(1); } 50% { transform: translateY(-18px) translateX(10px) scale(1.03); } }
+
+		.particle-layer {
+			position: absolute;
+			inset: 0;
+			overflow: hidden;
+		}
+
+		.particle {
+			position: absolute;
+			width: 6px;
+			height: 6px;
+			border-radius: 999px;
+			background: linear-gradient(180deg, var(--cyan), var(--purple));
+			box-shadow: 0 0 16px rgba(56,189,248,0.8);
+			animation: rise linear infinite;
+		}
+
+		@keyframes rise {
+			from { transform: translateY(110vh) translateX(0) scale(0.4); }
+			to { transform: translateY(-12vh) translateX(20px) scale(1.2); }
+		}
+
+		.hero-grid {
+			position: relative;
+			z-index: 1;
+			display: grid;
+			grid-template-columns: 1.2fr 0.8fr;
+			gap: 24px;
+			align-items: stretch;
+		}
+
+		.hero-card,
+		.section-card,
+		.event-card,
+		.timeline-item,
+		.faq-item,
+		.testimonial,
+		.organizer-card,
+		.form-shell,
+		.contact-card,
+		.sponsor {
+			border-radius: var(--radius);
+			background: rgba(255,255,255,0.08);
+			border: 1px solid rgba(255,255,255,0.15);
+			backdrop-filter: blur(20px);
+			-webkit-backdrop-filter: blur(20px);
+			box-shadow: var(--shadow);
+		}
+
+		.hero-card {
+			position: relative;
+			padding: 34px;
+			overflow: hidden;
+		}
+
+		.hero-card::before,
+		.hero-card::after {
+			content: "";
+			position: absolute;
+			border-radius: 50%;
+			pointer-events: none;
+		}
+
+		.hero-card::before {
+			inset: auto auto -120px -80px;
+			width: 280px;
+			height: 280px;
+			background: radial-gradient(circle, rgba(56,189,248,0.22), transparent 70%);
+		}
+
+		.hero-card::after {
+			inset: -70px -40px auto auto;
+			width: 230px;
+			height: 230px;
+			background: radial-gradient(circle, rgba(14,165,233,0.18), transparent 70%);
+		}
+
+		.eyebrow {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			padding: 9px 12px;
+			border-radius: 999px;
+			background: rgba(255,255,255,0.08);
+			border: 1px solid rgba(255,255,255,0.08);
+			color: var(--body);
+			font-size: 0.9rem;
+		}
+
+		.hero-logo {
+			width: 88px;
+			height: 88px;
+			border-radius: 26px;
+			display: grid;
+			place-items: center;
+			margin-bottom: 18px;
+			background: linear-gradient(135deg, rgba(59,130,246,0.95), rgba(139,92,246,0.95));
+			box-shadow: 0 0 32px rgba(59,130,246,0.35);
+			font-family: 'Space Grotesk', sans-serif;
+			font-size: 2rem;
+			font-weight: 700;
+		}
+
+		.hero h1 {
+			margin: 16px 0 12px;
+			font-family: 'Space Grotesk', sans-serif;
+			font-size: clamp(3.6rem, 10vw, 7.6rem);
+			line-height: 0.92;
+			letter-spacing: -0.06em;
+			text-transform: uppercase;
+			text-shadow: 0 0 32px rgba(56,189,248,0.24);
+		}
+
+		.hero-tagline {
+			margin: 0;
+			max-width: 58ch;
+			font-size: clamp(1rem, 2.1vw, 1.24rem);
+			line-height: 1.7;
+			color: var(--body);
+		}
+
+		.hero-meta {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 12px;
+			margin: 18px 0 20px;
+		}
+
+		.hero-date,
+		.hero-place {
+			padding: 12px 14px;
+			border-radius: 16px;
+			background: rgba(255,255,255,0.07);
+			border: 1px solid rgba(255,255,255,0.08);
+		}
+
+		.hero-date strong,
+		.hero-place strong { display: block; font-size: 0.95rem; }
+		.hero-date span,
+		.hero-place span { color: var(--muted); font-size: 0.88rem; }
+
+		.countdown {
+			display: grid;
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+			gap: 12px;
+			margin: 22px 0 26px;
+		}
+
+		.count-box {
+			padding: 16px 14px;
+			text-align: center;
+			border-radius: 20px;
+			background: linear-gradient(180deg, rgba(56,189,248,0.14), rgba(14,165,233,0.08));
+			border: 1px solid rgba(255,255,255,0.1);
+			box-shadow: 0 0 22px rgba(56,189,248,0.12);
+		}
+
+		.count-box strong {
+			display: block;
+			font-family: 'Orbitron', monospace;
+			font-size: clamp(1.45rem, 3vw, 2rem);
+			background: linear-gradient(135deg, var(--purple), var(--cyan));
+			-webkit-background-clip: text;
+			background-clip: text;
+			color: transparent;
+			margin-bottom: 4px;
+		}
+
+		.count-box span { color: var(--muted); font-size: 0.88rem; }
+
+		.cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; }
+
+		.btn {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			padding: 14px 18px;
+			cursor: pointer;
+			font-weight: 700;
+		}
+
+		.btn-primary {
+			background: linear-gradient(135deg, #3B82F6, #0EA5E9);
+			color: #fff;
+			border: none;
+			box-shadow: 0 0 28px rgba(56,189,248,0.3);
+		}
+
+		.btn-secondary {
+			background: rgba(255,255,255,0.04);
+			border-color: rgba(56,189,248,0.5);
+		}
+
+		.btn:hover {
+			transform: translateY(-3px) scale(1.03);
+			box-shadow: 0 0 32px rgba(56,189,248,0.18);
+		}
+
+		.mini-grid {
+			display: grid;
+			grid-template-columns: repeat(4, minmax(0,1fr));
+			gap: 12px;
+			margin-top: 20px;
+		}
+
+		.mini-card {
+			padding: 16px;
+			border-radius: 20px;
+			background: rgba(255,255,255,0.06);
+			border: 1px solid rgba(255,255,255,0.08);
+		}
+
+		.mini-card strong {
+			display: block;
+			font-family: 'Orbitron', monospace;
+			font-size: 1.5rem;
+			margin-bottom: 4px;
+			color: #fff;
+		}
+
+		.mini-card span { color: var(--muted); font-size: 0.9rem; }
+
+		.hero-side {
+			display: grid;
+			gap: 16px;
+		}
+
+		.hero-side .panel {
+			padding: 22px;
+			border-radius: var(--radius);
+		}
+
+		.panel h3,
+		.section-title h2,
+		.section-title h3 {
+			margin: 0 0 10px;
+			font-family: 'Space Grotesk', sans-serif;
+		}
+
+		.panel p,
+		.section-copy,
+		.event-copy,
+		.faq-item p,
+		.testimonial p,
+		.contact-copy,
+		.footer-copy {
+			margin: 0;
+			color: var(--body);
+			line-height: 1.75;
+		}
+
+		.stat-grid {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0,1fr));
+			gap: 14px;
+			margin-top: 14px;
+		}
+
+		.stat-card {
+			padding: 18px;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.stat-card::after {
+			content: "";
+			position: absolute;
+			inset: auto -30px -30px auto;
+			width: 100px;
+			height: 100px;
+			background: radial-gradient(circle, rgba(6,182,212,0.16), transparent 70%);
+			pointer-events: none;
+		}
+
+		.stat-card strong {
+			display: block;
+			font-family: 'Orbitron', monospace;
+			font-size: 2rem;
+			margin-bottom: 4px;
+			background: linear-gradient(135deg, var(--blue), var(--cyan), var(--gold));
+			-webkit-background-clip: text;
+			background-clip: text;
+			color: transparent;
+		}
+
+		.stat-card span { color: var(--muted); }
+
+		section.block {
+			padding: 88px 0 0;
+			scroll-margin-top: 96px;
+		}
+
+		.section-card {
+			padding: 28px;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.section-title {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: end;
+			justify-content: space-between;
+			gap: 12px;
+			margin-bottom: 18px;
+		}
+
+		.section-title h2 {
+			font-size: clamp(2rem, 4vw, 3.2rem);
+			letter-spacing: -0.04em;
+		}
+
+		.section-title p {
+			margin: 0;
+			color: var(--muted);
+			max-width: 62ch;
+			line-height: 1.7;
+		}
+
+		.section-badge {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			padding: 9px 12px;
+			border-radius: 999px;
+			background: rgba(255,255,255,0.06);
+			border: 1px solid rgba(255,255,255,0.09);
+			color: var(--muted);
+			font-size: 0.9rem;
+		}
+
+		.filters,
+		.chips {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+		}
+
+		.filter-btn,
+		.chip,
+		.tag {
+			padding: 10px 14px;
+			cursor: pointer;
+		}
+
+		.filter-btn.active {
+			background: linear-gradient(135deg, var(--blue), var(--purple));
+			color: #fff;
+			border-color: transparent;
+		}
+
+		.event-search {
+			margin-top: 16px;
+			display: flex;
+			gap: 12px;
+			flex-wrap: wrap;
+		}
+
+		.event-search input,
+		.form-grid input,
+		.form-grid select,
+		.form-grid textarea,
+		.faq-search input {
+			flex: 1 1 280px;
+			padding: 15px 16px;
+			border-radius: 16px;
+			border: 1px solid rgba(255,255,255,0.12);
+			background: rgba(255,255,255,0.05);
+			color: var(--text);
+			outline: none;
+		}
+
+		.event-search input:focus,
+		.form-grid input:focus,
+		.form-grid select:focus,
+		.form-grid textarea:focus,
+		.faq-search input:focus {
+			border-color: rgba(6,182,212,0.65);
+			box-shadow: 0 0 0 4px rgba(6,182,212,0.08);
+		}
+
+		.events-grid {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0,1fr));
+			gap: 16px;
+			margin-top: 18px;
+		}
+
+		.event-card {
+			position: relative;
+			overflow: hidden;
+			transform-style: preserve-3d;
+			transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+		}
+
+		.event-card::before {
+			content: "";
+			position: absolute;
+			inset: -1px;
+			background: linear-gradient(135deg, rgba(6,182,212,0.3), rgba(139,92,246,0.15), rgba(250,204,21,0.15));
+			opacity: 0;
+			transition: opacity 300ms ease;
+			pointer-events: none;
+			z-index: 0;
+		}
+
+		.event-card:hover {
+			transform: translateY(-8px) scale(1.01);
+			border-color: rgba(6,182,212,0.4);
+			box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+		}
+
+		.event-card:hover::before { opacity: 1; }
+
+		.event-inner {
+			position: relative;
+			z-index: 1;
+			padding: 18px;
+		}
+
+		.event-top {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 12px;
+		}
+
+		.event-icon {
+			width: 54px;
+			height: 54px;
+			border-radius: 18px;
+			display: grid;
+			place-items: center;
+			background: linear-gradient(135deg, rgba(56,189,248,0.20), rgba(14,165,233,0.22));
+			border: 1px solid rgba(255,255,255,0.09);
+			box-shadow: 0 0 22px rgba(56,189,248,0.16);
+		}
+
+		.event-icon[data-tone="gaming"] { background: linear-gradient(135deg, rgba(56,189,248,0.24), rgba(14,165,233,0.24)); }
+		.event-icon[data-tone="tech"] { background: linear-gradient(135deg, rgba(96,165,250,0.22), rgba(59,130,246,0.22)); }
+		.event-icon[data-tone="sports"] { background: linear-gradient(135deg, rgba(125,211,252,0.18), rgba(250,204,21,0.18)); }
+
+		.event-icon i { width: 22px; height: 22px; }
+
+		.event-name {
+			margin: 14px 0 8px;
+			font-family: 'Space Grotesk', sans-serif;
+			font-size: 1.22rem;
+		}
+
+		.event-copy { margin-bottom: 14px; }
+
+		.event-meta {
+			display: grid;
+			gap: 10px;
+			margin-bottom: 14px;
+		}
+
+		.meta-row {
+			display: flex;
+			justify-content: space-between;
+			gap: 16px;
+			padding: 10px 0;
+			border-bottom: 1px solid rgba(255,255,255,0.08);
+			color: var(--body);
+			font-size: 0.95rem;
+		}
+
+		.meta-row:last-child { border-bottom: none; }
+
+		.register-btn {
+			width: 100%;
+			padding: 13px 16px;
+			cursor: pointer;
+			font-weight: 800;
+			background: linear-gradient(135deg, rgba(59,130,246,0.95), rgba(14,165,233,0.95));
+			border: none;
+			color: #fff;
+		}
+
+		.register-btn[data-tone="gaming"] { background: linear-gradient(135deg, #38BDF8, #0EA5E9); }
+		.register-btn[data-tone="tech"] { background: linear-gradient(135deg, #60A5FA, #3B82F6); }
+		.register-btn[data-tone="sports"] { background: linear-gradient(135deg, #7DD3FC, #FACC15); color: #08111F; }
+
+		.rules-btn {
+			width: 100%;
+			padding: 12px 16px;
+			margin-bottom: 10px;
+			background: rgba(255,255,255,0.04);
+		}
+
+		.timeline {
+			display: grid;
+			gap: 14px;
+			margin-top: 14px;
+			position: relative;
+			padding-left: 14px;
+		}
+
+		.timeline::before {
+			content: "";
+			position: absolute;
+			left: 20px;
+			top: 6px;
+			bottom: 6px;
+			width: 2px;
+			background: linear-gradient(180deg, rgba(6,182,212,0.8), rgba(139,92,246,0.8), rgba(250,204,21,0.7));
+		}
+
+		.timeline-item {
+			position: relative;
+			padding: 18px 18px 18px 36px;
+		}
+
+		.timeline-item::before {
+			content: "";
+			position: absolute;
+			left: 12px;
+			top: 25px;
+			width: 18px;
+			height: 18px;
+			border-radius: 50%;
+			background: linear-gradient(135deg, var(--cyan), var(--purple));
+			box-shadow: 0 0 18px rgba(6,182,212,0.7);
+		}
+
+		.timeline-time {
+			font-family: 'Orbitron', monospace;
+			font-size: 0.95rem;
+			color: var(--gold);
+			margin-bottom: 5px;
+		}
+
+		.gallery-grid {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			gap: 14px;
+			margin-top: 18px;
+		}
+
+		.gallery-item {
+			position: relative;
+			overflow: hidden;
+			border-radius: 22px;
+			min-height: 200px;
+			cursor: pointer;
+			border: 1px solid rgba(255,255,255,0.1);
+			background: rgba(255,255,255,0.04);
+		}
+
+		.gallery-item::after {
+			content: attr(data-label);
+			position: absolute;
+			left: 14px;
+			bottom: 14px;
+			padding: 8px 12px;
+			border-radius: 999px;
+			background: rgba(8,11,24,0.6);
+			border: 1px solid rgba(255,255,255,0.12);
+			backdrop-filter: blur(14px);
+			color: #fff;
+			font-size: 0.9rem;
+			z-index: 1;
+		}
+
+		.gallery-media {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 450ms ease;
+		}
+
+		.gallery-item:hover .gallery-media { transform: scale(1.08); }
+
+		.gallery-item.video::before {
+			content: "▶";
+			position: absolute;
+			inset: 50% auto auto 50%;
+			transform: translate(-50%, -50%);
+			width: 68px;
+			height: 68px;
+			border-radius: 50%;
+			display: grid;
+			place-items: center;
+			background: rgba(8,11,24,0.65);
+			border: 1px solid rgba(255,255,255,0.12);
+			z-index: 2;
+			font-size: 1.1rem;
+		}
+
+		.gallery-item:nth-child(1) { grid-column: span 5; min-height: 320px; }
+		.gallery-item:nth-child(2) { grid-column: span 4; min-height: 240px; }
+		.gallery-item:nth-child(3) { grid-column: span 3; min-height: 240px; }
+		.gallery-item:nth-child(4) { grid-column: span 3; min-height: 240px; }
+		.gallery-item:nth-child(5) { grid-column: span 4; min-height: 240px; }
+		.gallery-item:nth-child(6) { grid-column: span 5; min-height: 320px; }
+
+		.carousel-wrap {
+			overflow: hidden;
+			margin-top: 18px;
+			border-radius: 22px;
+			border: 1px solid rgba(255,255,255,0.1);
+			background: rgba(255,255,255,0.04);
+		}
+
+		.carousel-track {
+			display: inline-flex;
+			gap: 14px;
+			padding: 14px 0;
+			animation: marquee 24s linear infinite;
+			width: max-content;
+		}
+
+		.sponsor {
+			min-width: 170px;
+			padding: 18px 20px;
+			display: grid;
+			place-items: center;
+			font-family: 'Space Grotesk', sans-serif;
+			font-weight: 700;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			background: linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.04));
+		}
+
+		.content-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 18px;
+			margin-top: 18px;
+		}
+
+		.contact-card,
+		.form-shell,
+		.organizer-card,
+		.faq-item,
+		.testimonial {
+			padding: 24px;
+		}
+
+		.contact-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 18px;
+			margin-top: 18px;
+		}
+
+		.map-frame {
+			width: 100%;
+			height: 280px;
+			border: 0;
+			border-radius: 20px;
+			overflow: hidden;
+			margin-top: 16px;
+			filter: saturate(1.05) contrast(1.05);
+		}
+
+		.socials,
+		.footer-links,
+		.organizer-socials {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+			margin-top: 14px;
+		}
+
+		.socials a,
+		.organizer-socials a,
+		.footer-links a {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			color: var(--body);
+		}
+
+		.form-grid {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 12px;
+			margin-top: 14px;
+		}
+
+		.field { display: grid; gap: 8px; }
+		.field.full { grid-column: 1 / -1; }
+		label { font-size: 0.92rem; font-weight: 700; color: var(--text); }
+
+		textarea {
+			min-height: 120px;
+			resize: vertical;
+		}
+
+		.submit-row {
+			display: flex;
+			gap: 12px;
+			flex-wrap: wrap;
+			margin-top: 14px;
+		}
+
+		.organizer-grid,
+		.faq-grid,
+		.testimonial-grid {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0,1fr));
+			gap: 16px;
+			margin-top: 18px;
+		}
+
+		.organizer-card {
+			position: relative;
+			overflow: hidden;
+		}
+
+		.avatar {
+			width: 100%;
+			aspect-ratio: 1 / 0.86;
+			border-radius: 18px;
+			overflow: hidden;
+			margin-bottom: 16px;
+			background: linear-gradient(135deg, rgba(59,130,246,0.22), rgba(139,92,246,0.22));
+		}
+
+		.avatar img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.organizer-card h3,
+		.testimonial h3,
+		.faq-item h3 {
+			margin: 0 0 8px;
+			font-family: 'Space Grotesk', sans-serif;
+		}
+
+		.role {
+			color: var(--gold);
+			font-family: 'Orbitron', monospace;
+			font-size: 0.85rem;
+			letter-spacing: 0.04em;
+		}
+
+		.chip {
+			color: var(--body);
+			font-size: 0.9rem;
+		}
+
+		.faq-grid {
+			grid-template-columns: repeat(2, minmax(0,1fr));
+		}
+
+		.faq-item {
+			cursor: pointer;
+		}
+
+		.faq-answer {
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 300ms ease;
+			color: var(--body);
+		}
+
+		.faq-item.open .faq-answer { max-height: 200px; }
+
+		.footer {
+			margin: 90px 0 40px;
+			padding: 26px;
+			border-radius: 28px;
+		}
+
+		.footer-grid {
+			display: grid;
+			grid-template-columns: 1.2fr 0.8fr 0.8fr;
+			gap: 18px;
+			align-items: start;
+		}
+
+		.footer small { color: var(--muted); }
+
+		.footer-copy strong {
+			display: block;
+			margin-bottom: 8px;
+			font-family: 'Space Grotesk', sans-serif;
+		}
+
+		.loading {
+			position: fixed;
+			inset: 0;
+			z-index: 3000;
+			display: grid;
+			place-items: center;
+			background:
+				radial-gradient(circle at center, rgba(6,182,212,0.22), transparent 28%),
+				linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+			transition: opacity 360ms ease, visibility 360ms ease;
+		}
+
+		.loading.hide { opacity: 0; visibility: hidden; }
+
+		.spinner {
+			width: 82px;
+			height: 82px;
+			border-radius: 50%;
+			border: 4px solid rgba(255,255,255,0.12);
+			border-top-color: var(--cyan);
+			border-right-color: var(--purple);
+			animation: spin 0.9s linear infinite;
+		}
+
+		@keyframes spin { to { transform: rotate(360deg); } }
+
+		.reveal {
+			opacity: 0;
+			transform: translateY(28px);
+			transition: opacity 700ms ease, transform 700ms ease;
+		}
+
+		.reveal.visible {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.cursor-glow {
+			position: fixed;
+			inset: 0 auto auto 0;
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+			pointer-events: none;
+			background: radial-gradient(circle, rgba(6,182,212,0.18), transparent 65%);
+			filter: blur(8px);
+			transform: translate(-50%, -50%);
+			z-index: 2;
+			opacity: 0.55;
+			mix-blend-mode: screen;
+		}
+
+		.lightbox,
+		.success-modal,
+		.video-modal {
+			position: fixed;
+			inset: 0;
+			z-index: 2500;
+			display: grid;
+			place-items: center;
+			padding: 20px;
+			background: rgba(0,0,0,0.65);
+			opacity: 0;
+			visibility: hidden;
+			transition: 220ms ease;
+		}
+
+		.lightbox.show,
+		.success-modal.show,
+		.video-modal.show {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.lightbox-card,
+		.modal-card {
+			width: min(920px, 100%);
+			border-radius: 28px;
+			overflow: hidden;
+			background: rgba(8,11,24,0.96);
+			border: 1px solid rgba(255,255,255,0.15);
+			box-shadow: var(--shadow);
+		}
+
+		.modal-card {
+			width: min(560px, 100%);
+			padding: 24px;
+		}
+
+		.lightbox-media {
+			width: 100%;
+			max-height: min(76vh, 760px);
+			object-fit: cover;
+		}
+
+		.lightbox-caption {
+			padding: 14px 16px 18px;
+			color: var(--body);
+		}
+
+		.lightbox-close,
+		.back-to-top,
+		.float-register {
+			cursor: pointer;
+		}
+
+		.lightbox-close {
+			position: absolute;
+			top: 16px;
+			right: 16px;
+			z-index: 2;
+			width: 42px;
+			height: 42px;
+			display: grid;
+			place-items: center;
+			background: rgba(8,11,24,0.7);
+		}
+
+		.success-badge {
+			width: 72px;
+			height: 72px;
+			border-radius: 50%;
+			display: grid;
+			place-items: center;
+			margin-bottom: 16px;
+			background: linear-gradient(135deg, var(--emerald), var(--cyan));
+			box-shadow: 0 0 28px rgba(16,185,129,0.28);
+		}
+
+		.success-badge i { width: 28px; height: 28px; color: #fff; }
+
+		.back-to-top,
+		.float-register {
+			position: fixed;
+			bottom: 20px;
+			z-index: 1100;
+			padding: 14px 18px;
+			font-weight: 800;
+			box-shadow: var(--shadow);
+		}
+
+		.back-to-top { right: 20px; display: none; }
+		.float-register { left: 20px; background: linear-gradient(135deg, var(--blue), var(--purple)); border: none; }
+
+		.form-note {
+			margin-top: 8px;
+			color: var(--muted);
+		}
+
+		.hide-if-empty { display: none; }
+
+		@media (max-width: 1100px) {
+			.hero-grid,
+			.content-grid,
+			.contact-grid,
+			.footer-grid,
+			.organizer-grid,
+			.faq-grid,
+			.testimonial-grid,
+			.events-grid {
+				grid-template-columns: 1fr 1fr;
+			}
+
+			.gallery-item:nth-child(n) { grid-column: span 6; }
+		}
+
+		@media (max-width: 780px) {
+			.nav {
+				border-radius: 24px;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+
+			.nav-links { order: 3; width: 100%; gap: 12px; font-size: 0.9rem; }
+			.hero { padding-top: 170px; }
+			.hero-grid,
+			.content-grid,
+			.contact-grid,
+			.footer-grid,
+			.organizer-grid,
+			.faq-grid,
+			.testimonial-grid,
+			.events-grid,
+			.mini-grid,
+			.countdown,
+			.stat-grid,
+			.form-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.hero-card,
+			.section-card,
+			.footer,
+			.form-shell,
+			.contact-card {
+				padding: 20px;
+				border-radius: 22px;
+			}
+
+			.gallery-item:nth-child(n) { grid-column: span 12; min-height: 220px; }
+			.back-to-top { right: 14px; }
+			.float-register { left: 14px; width: calc(100% - 28px); justify-content: center; }
+		}
+
+		@media (max-width: 520px) {
+			.page { width: min(100% - 16px, var(--max)); }
+			.hero h1 { font-size: clamp(2.8rem, 20vw, 4.6rem); }
+			.cta-row, .filters, .chips, .socials, .organizer-socials, .footer-links, .submit-row { gap: 8px; }
+		}
+	</style>
+</head>
+<body>
+	<div class="loading" id="loading">
+		<div class="spinner" aria-label="Loading"></div>
+	</div>
+
+	<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+	<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+	<nav class="nav glass" aria-label="Primary navigation">
+		<a class="brand" href="#home">
+			<span class="brand-mark">P</span>
+			<span>
+				<strong>PRAVAHA</strong>
+				<small style="color: var(--muted); letter-spacing: .18em; text-transform: uppercase;">SKIT Festival</small>
+			</span>
+		</a>
+		<div class="nav-links">
+			<a href="#about">About</a>
+			<a href="#events">Events</a>
+			<a href="#schedule">Schedule</a>
+			<a href="#gallery">Gallery</a>
+			<a href="#team">Team</a>
+			<a href="#sponsors">Sponsors</a>
+			<a href="#faq">FAQ</a>
+			<a href="#contact">Contact</a>
+		</div>
+		<div class="nav-actions">
+			<button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark and light mood">
+				<i data-lucide="moon-star"></i>
+			</button>
+			<button class="icon-btn" id="menuStub" type="button" aria-label="Open navigation" title="Responsive menu indicator">
+				<i data-lucide="menu"></i>
+			</button>
+		</div>
+	</nav>
+
+	<main id="home">
+		<section class="hero page reveal">
+			<div class="hero-bg" aria-hidden="true">
+				<div class="mesh"></div>
+				<div class="orb one"></div>
+				<div class="orb two"></div>
+				<div class="orb three"></div>
+				<div class="particle-layer" id="particleLayer"></div>
+				<div class="beam" style="top: 18%; left: 8%; animation-delay: -1s;"></div>
+				<div class="beam" style="top: 52%; left: 62%; animation-delay: -4s;"></div>
+				<div class="beam" style="top: 78%; left: 18%; animation-delay: -7s;"></div>
+			</div>
+
+			<div class="hero-grid">
+				<article class="hero-card glass">
+					<div class="hero-logo" aria-hidden="true">P</div>
+					<div class="eyebrow">Where Innovation Meets Competition, and Every Talent Finds Its Stage.</div>
+					<h1>PRAVAHA</h1>
+					<p class="hero-tagline">Annual College Fest of Swami Keshwanand Institute of Technology. Compete. Create. Conquer.</p>
+
+					<div class="hero-meta">
+						<div class="hero-date">
+							<strong>10 July</strong>
+							<span>Festival Day</span>
+						</div>
+						<div class="hero-place">
+							<strong>SKIT Campus</strong>
+							<span>Jaipur, Rajasthan</span>
+						</div>
+					</div>
+
+					<div class="countdown" id="countdown" aria-label="Countdown timer"></div>
+
+					<div class="cta-row">
+						<a class="btn btn-primary" href="#registration"><i data-lucide="ticket"></i>Register Now</a>
+						<a class="btn btn-secondary" href="#events"><i data-lucide="sparkles"></i>Explore Events</a>
+					</div>
+
+					<div class="mini-grid">
+						<div class="mini-card"><strong>500+</strong><span>Participants</span></div>
+						<div class="mini-card"><strong>20+</strong><span>Events</span></div>
+						<div class="mini-card"><strong>15+</strong><span>Organizers</span></div>
+						<div class="mini-card"><strong>1</strong><span>Epic Day</span></div>
+					</div>
+				</article>
+
+				<aside class="hero-side">
+					<div class="panel glass reveal">
+						<h3>Festival Pulse</h3>
+						<p>Technology, esports, sportsmanship, leadership, and creativity come together in a world-class festival atmosphere designed to feel prestigious and memorable.</p>
+						<div class="stat-grid">
+							<div class="stat-card"><strong>500+</strong><span>Participants</span></div>
+							<div class="stat-card"><strong>20+</strong><span>Events</span></div>
+							<div class="stat-card"><strong>15+</strong><span>Organizers</span></div>
+							<div class="stat-card"><strong>1</strong><span>Epic Day</span></div>
+						</div>
+					</div>
+
+					<div class="panel glass reveal">
+						<h3>Tagline Animation</h3>
+						<p style="font-size: 1.1rem; color: var(--text); font-family: 'Space Grotesk', sans-serif; line-height: 1.5; margin-bottom: 8px;">Compete. Create. Conquer.</p>
+						<p>The annual flagship fest of SKIT, crafted to feel premium, futuristic, and inviting for students across every department.</p>
+					</div>
+				</aside>
+			</div>
+		</section>
+
+		<section id="about" class="block page reveal">
+			<div class="section-card glass">
+				<div class="section-title">
+					<div>
+						<div class="section-badge"><i data-lucide="badge-info"></i>About PRAVAHA</div>
+						<h2>A celebration of innovation, technology, esports, sportsmanship, teamwork, creativity, and leadership.</h2>
+					</div>
+				</div>
+				<p class="section-copy">PRAVAHA is the annual flagship college festival of Swami Keshwanand Institute of Technology. It brings together students, faculty, and guests through events that showcase competitive energy, collaborative spirit, and campus pride.</p>
+				<div class="stat-grid" style="margin-top: 18px;">
+					<div class="stat-card"><strong>500+</strong><span>Participants</span></div>
+					<div class="stat-card"><strong>20+</strong><span>Events</span></div>
+					<div class="stat-card"><strong>15+</strong><span>Organizers</span></div>
+					<div class="stat-card"><strong>1</strong><span>Epic Day</span></div>
+				</div>
+			</div>
+		</section>
+
+		<section id="events" class="block page reveal">
+			<div class="section-card glass">
+				<div class="section-title">
+					<div>
+						<div class="section-badge"><i data-lucide="gamepad-2"></i>Events</div>
+						<h2>Beautifully organized arenas for gaming, technical, and sports competitions.</h2>
+					</div>
+					<p>Hover cards to feel the lift, glow, and glass effect. Use filters or search to explore quickly.</p>
+				</div>
+
+				<div class="filters" role="tablist" aria-label="Event category filters">
+					<button class="filter-btn active" data-filter="all" type="button">All</button>
+					<button class="filter-btn" data-filter="gaming" type="button">Gaming Arena</button>
+					<button class="filter-btn" data-filter="technical" type="button">Technical</button>
+					<button class="filter-btn" data-filter="sports" type="button">Sports Arena</button>
+				</div>
+
+				<div class="event-search">
+					<input id="eventSearch" type="search" placeholder="Search by event name, prize, team size, or type..." aria-label="Search events">
+				</div>
+
+				<div class="section-title" style="margin-top: 28px; align-items: center;">
+					<h3>🎮 Gaming Arena</h3>
+					<span class="section-badge"><i data-lucide="joystick"></i>Neon Cyan + Electric Blue</span>
+				</div>
+				<div class="events-grid" id="eventGridGaming">
+					<article class="event-card" data-category="gaming" data-search="bgmi gaming battle royale prize team size 4 register">
+						<div class="event-inner">
+							<div class="event-top">
+								<div class="event-icon" data-tone="gaming"><i data-lucide="gamepad-2"></i></div>
+								<span class="tag">BGMI</span>
+							</div>
+							<h3 class="event-name">BGMI Tournament</h3>
+							<p class="event-copy">High-intensity mobile esports showdown with a premium tournament setup and campus pride at stake.</p>
+							<div class="event-meta">
+								<div class="meta-row"><span>Prize Pool</span><strong>Placeholder</strong></div>
+								<div class="meta-row"><span>Team Size</span><strong>4 Players</strong></div>
+							</div>
+							<button class="register-btn" data-tone="gaming" data-event="BGMI Tournament" type="button">Register</button>
+						</div>
+					</article>
+					<article class="event-card" data-category="gaming" data-search="free fire gaming battle royale prize team size 4 register">
+						<div class="event-inner">
+							<div class="event-top">
+								<div class="event-icon" data-tone="gaming"><i data-lucide="flame"></i></div>
+								<span class="tag">Free Fire</span>
+							</div>
+							<h3 class="event-name">Free Fire Tournament</h3>
+							<p class="event-copy">Fast-paced action, sharp strategy, and a glowing arena atmosphere for competitive squads.</p>
+							<div class="event-meta">
+								<div class="meta-row"><span>Prize Pool</span><strong>Placeholder</strong></div>
+								<div class="meta-row"><span>Team Size</span><strong>4 Players</strong></div>
+							</div>
+							<button class="register-btn" data-tone="gaming" data-event="Free Fire Tournament" type="button">Register</button>
+						</div>
+					</article>
+					<article class="event-card" data-category="gaming" data-search="pubg mobile gaming battle royale prize team size 4 register">
+						<div class="event-inner">
+							<div class="event-top">
+								<div class="event-icon" data-tone="gaming"><i data-lucide="crosshair"></i></div>
+								<span class="tag">PUBG Mobile</span>
+							</div>
+							<h3 class="event-name">PUBG Mobile Tournament</h3>
+							<p class="event-copy">Strategic battle royale action with a polished, competitive festival presentation.</p>
+							<div class="event-meta">
+								<div class="meta-row"><span>Prize Pool</span><strong>Placeholder</strong></div>
+								<div class="meta-row"><span>Team Size</span><strong>4 Players</strong></div>
+							</div>
+							<button class="register-btn" data-tone="gaming" data-event="PUBG Mobile Tournament" type="button">Register</button>
+						</div>
+					</article>
+				</div>
+
+				<div class="section-title" style="margin-top: 30px; align-items: center;">
+					<h3>💻 Technical Events</h3>
+					<span class="section-badge"><i data-lucide="cpu"></i>Purple + Violet</span>
+				</div>
+				<div class="events-grid">
+					<article class="event-card" data-category="technical" data-search="hackathon coding innovation duration rules eligibility register">
+						<div class="event-inner">
+							<div class="event-top">
+								<div class="event-icon" data-tone="tech"><i data-lucide="code-2"></i></div>
+								<span class="tag">Hackathon</span>
+							</div>
+							<h3 class="event-name">Hackathon</h3>
+							<p class="event-copy">Build something meaningful in a focused, high-energy sprint using design, code, and teamwork.</p>
+							<div class="event-meta">
+								<div class="meta-row"><span>Duration</span><strong>6 Hours</strong></div>
+								<div class="meta-row"><span>Eligibility</span><strong>All Departments</strong></div>
+							</div>
+							<button class="rules-btn chip" type="button">Rules</button>
+							<button class="register-btn" data-tone="tech" data-event="Hackathon" type="button">Register</button>
+						</div>
+					</article>
+					<article class="event-card" data-category="technical" data-search="typing challenge speed accuracy duration rules eligibility register">
+						<div class="event-inner">
+							<div class="event-top">
+								<div class="event-icon" data-tone="tech"><i data-lucide="keyboard"></i></div>
+								<span class="tag">Typing</span>
+							</div>
+							<h3 class="event-name">Fast Typing Challenge</h3>
+							<p class="event-copy">A fast, accuracy-driven competition that rewards focus and precision under pressure.</p>
+							<div class="event-meta">
+								<div class="meta-row"><span>Duration</span><strong>10 Minutes</strong></div>
+								<div class="meta-row"><span>Eligibility</span><strong>Open to All</strong></div>
+							</div>
+							<button class="rules-btn chip" type="button">Rules</button>
+							<button class="register-btn" data-tone="tech" data-event="Fast Typing Challenge" type="button">Register</button>
+						</div>
+					</article>
+				</div>
+
+				<div class="section-title" style="margin-top: 30px; align-items: center;">
+					<h3>🏆 Sports Arena</h3>
+					<span class="section-badge"><i data-lucide="medal"></i>Orange + Gold</span>
+				</div>
+				<div class="events-grid">
+					<article class="event-card" data-category="sports" data-search="kabaddi sports team format schedule register">
+						<div class="event-inner">
+							<div class="event-top">
+								<div class="event-icon" data-tone="sports"><i data-lucide="shield"></i></div>
+								<span class="tag">Kabaddi</span>
+							</div>
+							<h3 class="event-name">Kabaddi</h3>
+							<p class="event-copy">A powerful sports showdown emphasizing agility, strategy, and team spirit on the field.</p>
+							<div class="event-meta">
+								<div class="meta-row"><span>Team Size</span><strong>7 Players</strong></div>
+								<div class="meta-row"><span>Match Format</span><strong>League + Knockout</strong></div>
+								<div class="meta-row"><span>Schedule</span><strong>2:00 PM</strong></div>
+							</div>
+							<button class="register-btn" data-tone="sports" data-event="Kabaddi" type="button">Register</button>
+						</div>
+					</article>
+					<article class="event-card" data-category="sports" data-search="gully cricket sports team format schedule register">
+						<div class="event-inner">
+							<div class="event-top">
+								<div class="event-icon" data-tone="sports"><i data-lucide="dribbble"></i></div>
+								<span class="tag">Cricket</span>
+							</div>
+							<h3 class="event-name">Gully Cricket</h3>
+							<p class="event-copy">An energetic campus cricket format with friendly competition and high festival spirit.</p>
+							<div class="event-meta">
+								<div class="meta-row"><span>Team Size</span><strong>6 Players</strong></div>
+								<div class="meta-row"><span>Match Format</span><strong>Knockout</strong></div>
+								<div class="meta-row"><span>Schedule</span><strong>4:00 PM</strong></div>
+							</div>
+							<button class="register-btn" data-tone="sports" data-event="Gully Cricket" type="button">Register</button>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section id="schedule" class="block page reveal">
+			<div class="section-card glass">
+				<div class="section-title">
+					<div>
+						<div class="section-badge"><i data-lucide="calendar-range"></i>Schedule</div>
+						<h2>Beautiful vertical timeline for the fest day.</h2>
+					</div>
+				</div>
+				<div class="timeline">
+					<div class="timeline-item glass">
+						<div class="timeline-time">9:00 AM</div>
+						<h3>Opening Ceremony</h3>
+						<p class="event-copy">A ceremonial start setting the tone for an immersive day.</p>
+					</div>
+					<div class="timeline-item glass">
+						<div class="timeline-time">10:00 AM</div>
+						<h3>Gaming Begins</h3>
+						<p class="event-copy">The gaming arena lights up with the first matches.</p>
+					</div>
+					<div class="timeline-item glass">
+						<div class="timeline-time">11:00 AM</div>
+						<h3>Hackathon</h3>
+						<p class="event-copy">Focused innovation and rapid problem-solving take over.</p>
+					</div>
+					<div class="timeline-item glass">
+						<div class="timeline-time">12:30 PM</div>
+						<h3>Typing Competition</h3>
+						<p class="event-copy">Accuracy, speed, and pressure meet in a timed challenge.</p>
+					</div>
+					<div class="timeline-item glass">
+						<div class="timeline-time">2:00 PM</div>
+						<h3>Kabaddi</h3>
+						<p class="event-copy">The sports arena turns intense with team energy and strength.</p>
+					</div>
+					<div class="timeline-item glass">
+						<div class="timeline-time">4:00 PM</div>
+						<h3>Gully Cricket</h3>
+						<p class="event-copy">A fast, crowd-pleasing sports highlight for the campus.</p>
+					</div>
+					<div class="timeline-item glass">
+						<div class="timeline-time">6:00 PM</div>
+						<h3>Prize Distribution</h3>
+						<p class="event-copy">Closing with celebration, recognition, and applause.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="gallery" class="block page reveal">
+			<div class="section-card glass">
+				<div class="section-title">
+					<div>
+						<div class="section-badge"><i data-lucide="image-play"></i>Gallery</div>
+						<h2>Masonry grid with hover zoom, lightbox, and video support.</h2>
+					</div>
+				</div>
+				<div class="gallery-grid">
+					<figure class="gallery-item" data-label="Main Stage" data-type="image" data-src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1600&q=80">
+						<img class="gallery-media" loading="lazy" alt="Festival stage" src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80">
+					</figure>
+					<figure class="gallery-item" data-label="Esports Arena" data-type="image" data-src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1600&q=80">
+						<img class="gallery-media" loading="lazy" alt="Esports arena" src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80">
+					</figure>
+					<figure class="gallery-item video" data-label="Aftermovie" data-type="video" data-src="https://www.w3schools.com/html/mov_bbb.mp4" data-poster="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80">
+						<img class="gallery-media" loading="lazy" alt="Festival video preview" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80">
+					</figure>
+					<figure class="gallery-item" data-label="Creative Zone" data-type="image" data-src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&w=1600&q=80">
+						<img class="gallery-media" loading="lazy" alt="Creative workshop" src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&w=1200&q=80">
+					</figure>
+					<figure class="gallery-item" data-label="Sports Arena" data-type="image" data-src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1600&q=80">
+						<img class="gallery-media" loading="lazy" alt="Sports arena" src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1200&q=80">
+					</figure>
+					<figure class="gallery-item" data-label="Award Night" data-type="image" data-src="https://images.unsplash.com/photo-1511795409834-432f7b3f4d4b?auto=format&fit=crop&w=1600&q=80">
+						<img class="gallery-media" loading="lazy" alt="Award celebration" src="https://images.unsplash.com/photo-1511795409834-432f7b3f4d4b?auto=format&fit=crop&w=1200&q=80">
+					</figure>
+				</div>
+			</div>
+		</section>
+
+		<section id="team" class="block page reveal">
+			<div class="section-card glass">
+				<div class="section-title">
+					<div>
+						<div class="section-badge"><i data-lucide="users"></i>Organizing Team</div>
+						<h2>Faculty coordinators, student coordinators, and volunteers.</h2>
+					</div>
+				</div>
+				<div class="organizer-grid">
+					<article class="organizer-card glass">
+						<div class="avatar"><img alt="Faculty coordinator" loading="lazy" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80"></div>
+						<div class="role">Faculty Coordinator</div>
+						<h3>Dr. Anjali Sharma</h3>
+						<p class="footer-copy">Guiding the festival vision with academic leadership and campus support.</p>
+						<div class="organizer-socials">
+							<a href="#"><i data-lucide="linkedin"></i></a>
+							<a href="#"><i data-lucide="instagram"></i></a>
+							<a href="#"><i data-lucide="mail"></i></a>
+						</div>
+					</article>
+					<article class="organizer-card glass">
+						<div class="avatar"><img alt="Student coordinator" loading="lazy" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80"></div>
+						<div class="role">Student Coordinator</div>
+						<h3>Rohan Mehta</h3>
+						<p class="footer-copy">Coordinating events, registration flow, and participant experience.</p>
+						<div class="organizer-socials">
+							<a href="#"><i data-lucide="linkedin"></i></a>
+							<a href="#"><i data-lucide="instagram"></i></a>
+							<a href="#"><i data-lucide="mail"></i></a>
+						</div>
+					</article>
+					<article class="organizer-card glass">
+						<div class="avatar"><img alt="Volunteer lead" loading="lazy" src="https://images.unsplash.com/photo-1494790108377-be9c29b29331?auto=format&fit=crop&w=900&q=80"></div>
+						<div class="role">Volunteer Lead</div>
+						<h3>Priya Singh</h3>
+						<p class="footer-copy">Ensuring smooth ground support, hospitality, and event operations.</p>
+						<div class="organizer-socials">
+							<a href="#"><i data-lucide="linkedin"></i></a>
+							<a href="#"><i data-lucide="instagram"></i></a>
+							<a href="#"><i data-lucide="mail"></i></a>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section id="sponsors" class="block page reveal">
+			<div class="section-card glass" id="sponsorSection">
+				<div class="section-title">
+					<div>
+						<div class="section-badge"><i data-lucide="badge-dollar-sign"></i>Sponsors</div>
+						<h2>Scrolling logo carousel that hides if no sponsors exist.</h2>
+					</div>
+				</div>
+				<div class="carousel-wrap" id="sponsorCarouselWrap">
+					<div class="carousel-track" id="sponsorTrack"></div>
+				</div>
+			</div>
+		</section>
+
+		<section id="registration" class="block page reveal">
+			<div class="section-card glass">
+				<div class="section-title">
+					<div>
+						<div class="section-badge"><i data-lucide="clipboard-list"></i>Registration</div>
+						<h2>Modern floating glass form with a polished success animation.</h2>
+					</div>
+				</div>
+				<div class="content-grid">
+					<div class="form-shell glass">
+						<h3>Register for PRAVAHA 2026</h3>
+						<p class="form-note">Fill in your details and submit the form to trigger the success popup.</p>
+						<form id="registrationForm">
+							<div class="form-grid">
+								<div class="field"><label for="name">Name</label><input id="name" required type="text" placeholder="Your full name"></div>
+								<div class="field"><label for="college">College</label><input id="college" required type="text" placeholder="College name"></div>
+								<div class="field"><label for="branch">Branch</label><input id="branch" required type="text" placeholder="Branch"></div>
+								<div class="field"><label for="year">Year</label><select id="year" required><option value="">Select year</option><option>1st Year</option><option>2nd Year</option><option>3rd Year</option><option>4th Year</option></select></div>
+								<div class="field"><label for="phone">Phone</label><input id="phone" required type="tel" placeholder="Mobile number"></div>
+								<div class="field"><label for="email">Email</label><input id="email" required type="email" placeholder="Email address"></div>
+								<div class="field"><label for="event">Event</label><select id="event" required><option value="">Choose event</option><option>BGMI Tournament</option><option>Free Fire Tournament</option><option>PUBG Mobile Tournament</option><option>Hackathon</option><option>Fast Typing Challenge</option><option>Kabaddi</option><option>Gully Cricket</option></select></div>
+								<div class="field"><label for="team">Team Name</label><input id="team" type="text" placeholder="Optional"></div>
+								<div class="field full"><label for="notes">Notes</label><textarea id="notes" placeholder="Add anything important about your participation"></textarea></div>
+							</div>
+							<div class="submit-row">
+								<button class="btn btn-primary" type="submit"><i data-lucide="send"></i>Submit Registration</button>
+								<button class="btn btn-secondary" type="reset">Reset</button>
+							</div>
+						</form>
+					</div>
+					<div class="contact-card glass">
+						<h3>What happens next?</h3>
+						<p class="contact-copy">After submission, a success animation confirms your registration. The form is built to be mobile-first, accessible, and easy to use.</p>
+						<div class="chips" style="margin-top: 16px;">
+							<span class="chip">Glass UI</span>
+							<span class="chip">Neon Glow</span>
+							<span class="chip">Smooth Motion</span>
+							<span class="chip">Fast Flow</span>
+						</div>
+						<div class="stat-grid" style="margin-top: 18px;">
+							<div class="stat-card"><strong>95+</strong><span>Lighthouse Target</span></div>
+							<div class="stat-card"><strong>WCAG</strong><span>Accessible</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="faq" class="block page reveal">
+			<div class="section-card glass">
+				<div class="section-title">
+					<div>
+						<div class="section-badge"><i data-lucide="help-circle"></i>FAQ</div>
+						<h2>Frequently asked questions.</h2>
+					</div>
+				</div>
+				<div class="faq-grid">
+					<div class="faq-item glass">
+						<h3>What is PRAVAHA?</h3>
+						<div class="faq-answer"><p>PRAVAHA is the annual flagship college festival of SKIT, bringing together innovation, technology, esports, sports, and culture.</p></div>
+					</div>
+					<div class="faq-item glass">
+						<h3>Who can participate?</h3>
+						<div class="faq-answer"><p>Students from SKIT and, where permitted, participants from other colleges can join the events and competitions.</p></div>
+					</div>
+					<div class="faq-item glass">
+						<h3>How do I register?</h3>
+						<div class="faq-answer"><p>Use the floating registration form on this page and submit the details for your selected event.</p></div>
+					</div>
+					<div class="faq-item glass">
+						<h3>Are there certificates?</h3>
+						<div class="faq-answer"><p>Yes. Participants and winners can receive certificates and prizes depending on the event category.</p></div>
+					</div>
+					<div class="faq-item glass">
+						<h3>Can students from other colleges participate?</h3>
+						<div class="faq-answer"><p>Yes, for events open to external participants. The rules will clarify eligibility for each category.</p></div>
+					</div>
+					<div class="faq-item glass">
+						<h3>Will there be a schedule update?</h3>
+						<div class="faq-answer"><p>The schedule section keeps the festival timeline visible and easy to follow on any device.</p></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="contact" class="block page reveal">
+			<div class="section-card glass">
+				<div class="section-title">
+					<div>
+						<div class="section-badge"><i data-lucide="map-pinned"></i>Contact</div>
+						<h2>Swami Keshwanand Institute of Technology</h2>
+					</div>
+				</div>
+				<div class="contact-grid">
+					<div class="contact-card glass">
+						<h3>Find Us</h3>
+						<p class="contact-copy">Swami Keshwanand Institute of Technology, Jaipur, Rajasthan, India</p>
+						<p class="contact-copy" style="margin-top: 10px;"><strong>Email:</strong> pravaha2026@skit.ac.in</p>
+						<p class="contact-copy"><strong>Phone:</strong> +91 98765 43210</p>
+						<div class="socials">
+							<a class="chip" href="#"><i data-lucide="instagram"></i>Instagram</a>
+							<a class="chip" href="#"><i data-lucide="linkedin"></i>LinkedIn</a>
+						</div>
+						<iframe class="map-frame" title="Google Map" loading="lazy" src="https://www.google.com/maps?q=Swami%20Keshwanand%20Institute%20of%20Technology&output=embed"></iframe>
+					</div>
+
+					<div class="testimonial glass">
+						<h3>What visitors should feel</h3>
+						<p>Prestigious, exciting, and professionally organized. The design aims to feel polished enough for a national-level college festival.</p>
+						<div class="testimonial-grid" style="grid-template-columns: 1fr; margin-top: 18px;">
+							<div class="testimonial glass">
+								<h3>Instagram</h3>
+								<p>@pravaha.skit</p>
+							</div>
+							<div class="testimonial glass">
+								<h3>LinkedIn</h3>
+								<p>Swami Keshwanand Institute of Technology</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="page footer glass reveal">
+			<div class="footer-grid">
+				<div>
+					<div class="section-badge"><i data-lucide="shield-half"></i>PRAVAHA 2026</div>
+					<p class="footer-copy" style="margin-top: 12px;">© 2026 PRAVAHA<br>Swami Keshwanand Institute of Technology<br>All Rights Reserved</p>
+				</div>
+				<div>
+					<strong style="font-family: 'Space Grotesk', sans-serif;">Quick Links</strong>
+					<div class="footer-links">
+						<a href="#about">About</a>
+						<a href="#events">Events</a>
+						<a href="#gallery">Gallery</a>
+						<a href="#contact">Contact</a>
+					</div>
+				</div>
+				<div>
+					<strong style="font-family: 'Space Grotesk', sans-serif;">Social Icons</strong>
+					<div class="footer-links">
+						<a href="#"><i data-lucide="instagram"></i>Instagram</a>
+						<a href="#"><i data-lucide="linkedin"></i>LinkedIn</a>
+						<a href="#"><i data-lucide="twitter"></i>X</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</main>
+
+	<button class="float-register" type="button" id="floatRegister">Register Now</button>
+	<button class="back-to-top" type="button" id="backToTop">Back to top</button>
+
+	<div class="lightbox" id="lightbox" aria-hidden="true">
+		<div class="lightbox-card">
+			<button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close lightbox"><i data-lucide="x"></i></button>
+			<div id="lightboxContent"></div>
+		</div>
+	</div>
+
+	<div class="success-modal" id="successModal" aria-hidden="true">
+		<div class="modal-card glass">
+			<div class="success-badge"><i data-lucide="check"></i></div>
+			<h3>Registration Successful</h3>
+			<p class="contact-copy" id="successText">Your registration has been submitted successfully.</p>
+			<div class="submit-row" style="margin-top: 18px;">
+				<button class="btn btn-primary" id="closeSuccess" type="button">Close</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="video-modal" id="videoModal" aria-hidden="true">
+		<div class="lightbox-card">
+			<button class="lightbox-close" id="videoClose" type="button" aria-label="Close video"><i data-lucide="x"></i></button>
+			<video id="videoPlayer" class="lightbox-media" controls playsinline></video>
+			<div class="lightbox-caption" id="videoCaption"></div>
+		</div>
+	</div>
+
+	<script>
+		const sponsorData = [
+			'TechNova',
+			'BluePeak',
+			'Astra Labs',
+			'CodeForge',
+			'PulseX',
+			'QuantumHub'
+		];
+
+		const sponsorTrack = document.getElementById('sponsorTrack');
+		const sponsorWrap = document.getElementById('sponsorCarouselWrap');
+		if (!sponsorData.length) {
+			sponsorWrap.parentElement.classList.add('hide-if-empty');
+		} else {
+			sponsorData.concat(sponsorData).forEach((name) => {
+				const item = document.createElement('div');
+				item.className = 'sponsor';
+				item.textContent = name;
+				sponsorTrack.appendChild(item);
+			});
+		}
+
+		if (window.lucide) {
+			lucide.createIcons();
+		}
+
+		const loading = document.getElementById('loading');
+		window.addEventListener('load', () => {
+			setTimeout(() => loading.classList.add('hide'), 400);
+		});
+
+		const particleLayer = document.getElementById('particleLayer');
+		for (let index = 0; index < 44; index++) {
+			const particle = document.createElement('span');
+			particle.className = 'particle';
+			particle.style.left = Math.random() * 100 + 'vw';
+			particle.style.animationDuration = 9 + Math.random() * 12 + 's';
+			particle.style.animationDelay = Math.random() * 10 + 's';
+			particle.style.opacity = 0.32 + Math.random() * 0.7;
+			particle.style.transform = 'scale(' + (0.4 + Math.random() * 1.2) + ')';
+			particleLayer.appendChild(particle);
+		}
+
+		const cursorGlow = document.getElementById('cursorGlow');
+		window.addEventListener('pointermove', (event) => {
+			cursorGlow.style.transform = `translate(${event.clientX}px, ${event.clientY}px) translate(-50%, -50%)`;
+		});
+
+		const countdown = document.getElementById('countdown');
+		const targetDate = new Date('2026-07-10T09:00:00');
+
+		function pad(value) {
+			return String(value).padStart(2, '0');
+		}
+
+		function renderCountdown() {
+			const now = new Date();
+			const diff = Math.max(targetDate - now, 0);
+			const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+			const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+			const minutes = Math.floor((diff / (1000 * 60)) % 60);
+			const seconds = Math.floor((diff / 1000) % 60);
+
+			countdown.innerHTML = `
+				<div class="count-box"><strong>${pad(days)}</strong><span>Days</span></div>
+				<div class="count-box"><strong>${pad(hours)}</strong><span>Hours</span></div>
+				<div class="count-box"><strong>${pad(minutes)}</strong><span>Minutes</span></div>
+				<div class="count-box"><strong>${pad(seconds)}</strong><span>Seconds</span></div>
+			`;
+		}
+
+		renderCountdown();
+		setInterval(renderCountdown, 1000);
+
+		const progressBar = document.getElementById('progressBar');
+		const backToTop = document.getElementById('backToTop');
+		window.addEventListener('scroll', () => {
+			const scrollTop = window.scrollY;
+			const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+			progressBar.style.width = maxScroll > 0 ? `${(scrollTop / maxScroll) * 100}%` : '0%';
+			backToTop.style.display = scrollTop > 500 ? 'inline-flex' : 'none';
+		});
+		backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+		const sections = document.querySelectorAll('.reveal');
+		const sectionObserver = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('visible');
+				}
+			});
+		}, { threshold: 0.16 });
+		sections.forEach((section) => sectionObserver.observe(section));
+
+		const eventSearch = document.getElementById('eventSearch');
+		const filterBtns = document.querySelectorAll('.filter-btn');
+		const eventCards = document.querySelectorAll('.event-card');
+		let activeFilter = 'all';
+
+		function applyFilters() {
+			const term = eventSearch.value.trim().toLowerCase();
+			eventCards.forEach((card) => {
+				const matchesFilter = activeFilter === 'all' || card.dataset.category === activeFilter;
+				const matchesTerm = !term || card.dataset.search.includes(term) || card.textContent.toLowerCase().includes(term);
+				card.style.display = matchesFilter && matchesTerm ? '' : 'none';
+			});
+		}
+
+		filterBtns.forEach((button) => {
+			button.addEventListener('click', () => {
+				filterBtns.forEach((item) => item.classList.remove('active'));
+				button.classList.add('active');
+				activeFilter = button.dataset.filter;
+				applyFilters();
+			});
+		});
+
+		eventSearch.addEventListener('input', applyFilters);
+
+		const registrationForm = document.getElementById('registrationForm');
+		const successModal = document.getElementById('successModal');
+		const successText = document.getElementById('successText');
+		const closeSuccess = document.getElementById('closeSuccess');
+
+		document.querySelectorAll('.register-btn').forEach((button) => {
+			button.addEventListener('click', () => {
+				document.getElementById('event').value = button.dataset.event;
+				document.getElementById('registration').scrollIntoView({ behavior: 'smooth' });
+			});
+		});
+
+		registrationForm.addEventListener('submit', (event) => {
+			event.preventDefault();
+			const name = document.getElementById('name').value || 'Participant';
+			const selectedEvent = document.getElementById('event').value || 'your selected event';
+			successText.textContent = `Thank you, ${name}. Your registration for ${selectedEvent} has been submitted successfully.`;
+			successModal.classList.add('show');
+			successModal.setAttribute('aria-hidden', 'false');
+			registrationForm.reset();
+		});
+
+		function closeSuccessModal() {
+			successModal.classList.remove('show');
+			successModal.setAttribute('aria-hidden', 'true');
+		}
+		closeSuccess.addEventListener('click', closeSuccessModal);
+		successModal.addEventListener('click', (event) => {
+			if (event.target === successModal) closeSuccessModal();
+		});
+
+		const floatRegister = document.getElementById('floatRegister');
+		floatRegister.addEventListener('click', () => {
+			document.getElementById('registration').scrollIntoView({ behavior: 'smooth' });
+		});
+
+		const faqItems = document.querySelectorAll('.faq-item');
+		faqItems.forEach((item) => {
+			item.addEventListener('click', () => {
+				item.classList.toggle('open');
+			});
+		});
+
+		const lightbox = document.getElementById('lightbox');
+		const lightboxContent = document.getElementById('lightboxContent');
+		const lightboxClose = document.getElementById('lightboxClose');
+
+		function closeLightbox() {
+			lightbox.classList.remove('show');
+			lightbox.setAttribute('aria-hidden', 'true');
+			lightboxContent.innerHTML = '';
+		}
+
+		document.querySelectorAll('.gallery-item:not(.video)').forEach((item) => {
+			item.addEventListener('click', () => {
+				const src = item.dataset.src;
+				const label = item.dataset.label;
+				const type = item.dataset.type;
+				lightboxContent.innerHTML = type === 'video'
+					? `<video class="lightbox-media" controls autoplay playsinline src="${src}" poster="${item.dataset.poster || ''}"></video><div class="lightbox-caption">${label}</div>`
+					: `<img class="lightbox-media" alt="${label}" src="${src}"><div class="lightbox-caption">${label}</div>`;
+				lightbox.classList.add('show');
+				lightbox.setAttribute('aria-hidden', 'false');
+			});
+		});
+
+		lightboxClose.addEventListener('click', closeLightbox);
+		lightbox.addEventListener('click', (event) => {
+			if (event.target === lightbox) closeLightbox();
+		});
+
+		const videoModal = document.getElementById('videoModal');
+		const videoPlayer = document.getElementById('videoPlayer');
+		const videoCaption = document.getElementById('videoCaption');
+		const videoClose = document.getElementById('videoClose');
+
+		function closeVideo() {
+			videoModal.classList.remove('show');
+			videoModal.setAttribute('aria-hidden', 'true');
+			videoPlayer.pause();
+			videoPlayer.removeAttribute('src');
+			videoPlayer.load();
+		}
+
+		videoClose.addEventListener('click', closeVideo);
+		videoModal.addEventListener('click', (event) => {
+			if (event.target === videoModal) closeVideo();
+		});
+
+		document.querySelectorAll('.gallery-item.video').forEach((item) => {
+			item.addEventListener('click', () => {
+				videoPlayer.src = item.dataset.src;
+				videoPlayer.poster = item.dataset.poster || '';
+				videoCaption.textContent = item.dataset.label;
+				videoModal.classList.add('show');
+				videoModal.setAttribute('aria-hidden', 'false');
+				videoPlayer.play().catch(() => {});
+			});
+		});
+
+		const themeToggle = document.getElementById('themeToggle');
+		let lightMode = false;
+		themeToggle.addEventListener('click', () => {
+			lightMode = !lightMode;
+			document.body.style.background = lightMode
+				? 'linear-gradient(180deg, #EEF2FF 0%, #E2E8F0 55%, #CBD5E1 100%)'
+				: '';
+			document.body.style.color = lightMode ? '#0F172A' : '';
+		});
+
+		const sponsorSection = document.getElementById('sponsorSection');
+		sponsorSection.classList.toggle('hide-if-empty', sponsorData.length === 0);
+
+		lucide.createIcons();
+	</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+.container-fluid {
+    background-color: #10002b;
+    color: white;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #10002b;
+}
+
+.navbarSupportedContent {
+    background-color: #10002b;
+    color: white;
+    align-items: center;
+}
